@@ -23,11 +23,15 @@ export default function Home(props: {
     )
 }
 
-export async function getServerSideProps() {
-    let url = "https://api.adviceslip.com/advice"
+export async function getServerSideProps(context: any) {
+    let adviceID = context.query.adviceID
 
-    let adviceID
+    let url = "https://api.adviceslip.com/advice"
     let adviceText
+
+    if (!isNaN(parseInt(adviceID))) {
+        url += "/" + adviceID
+    }
 
     try {
         const response = await fetch(url, { cache: "no-store" })
@@ -36,8 +40,8 @@ export async function getServerSideProps() {
         adviceID = data["slip"]["id"]
         adviceText = data["slip"]["advice"]
     } catch (e) {
-        adviceID = 500
-        adviceText = "Unfortunately, the server seems to have encountered an error."
+        adviceID = 404
+        adviceText = "The advice you were looking for could not be found."
     }
 
     return {
