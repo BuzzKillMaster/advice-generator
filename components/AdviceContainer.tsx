@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import AdviceHeading from "./AdviceHeading";
 import AdviceQuotation from "./AdviceQuotation";
 import AdviceContainerDecoration from "./AdviceContainerDecoration";
 import RequestAdviceButton from "./RequestAdviceButton";
-import {Router} from "next/router";
 
 
 export default function AdviceContainer(props: {
