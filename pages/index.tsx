@@ -2,11 +2,9 @@ import Head from 'next/head'
 import React from "react";
 import AdviceContainer from "../components/AdviceContainer";
 import PoweredByStatement from "../components/PoweredByStatement";
+import advice from "./types/advice";
 
-export default function Home(props: {
-    adviceID: number,
-    adviceText: string
-}) {
+export default function Home(props: advice) {
     return (
         <>
             <Head>
@@ -16,7 +14,7 @@ export default function Home(props: {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={"w-full min-h-screen bg-slate-800 flex flex-col items-center justify-center px-4 pt-10 pb-16"}>
-                <AdviceContainer adviceID={props.adviceID} adviceText={props.adviceText}/>
+                <AdviceContainer adviceID={props.id} adviceText={props.text}/>
                 <PoweredByStatement/>
             </main>
         </>
