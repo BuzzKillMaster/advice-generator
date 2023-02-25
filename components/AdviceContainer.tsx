@@ -3,14 +3,11 @@ import AdviceHeading from "./AdviceHeading";
 import AdviceQuotation from "./AdviceQuotation";
 import AdviceContainerDecoration from "./AdviceContainerDecoration";
 import RequestAdviceButton from "./RequestAdviceButton";
-import advice from "../pages/types/advice";
+import Advice from "../pages/types/Advice";
 
 
-export default function AdviceContainer(props: {
-    id: number,
-    text: string
-}) {
-    const [advice, setAdvice] = useState<advice>(props)
+export default function AdviceContainer(props: Advice) {
+    const [advice, setAdvice] = useState<Advice>(props)
 
     try {
         window.history.replaceState(null, "", "?id=" + advice.id)

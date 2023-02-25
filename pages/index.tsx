@@ -1,9 +1,9 @@
 import React from "react";
 import AdviceContainer from "../components/AdviceContainer";
 import PoweredByStatement from "../components/PoweredByStatement";
-import advice from "./types/advice";
+import Advice from "./types/Advice";
 
-export default function Home(props: advice) {
+export default function Home(props: Advice) {
     return (
         <main className={"w-full min-h-screen bg-slate-800 flex flex-col items-center justify-center px-4 pt-10 pb-16"}>
             <AdviceContainer {...props}/>
