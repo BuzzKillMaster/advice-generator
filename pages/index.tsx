@@ -6,7 +6,7 @@ import advice from "./types/advice";
 export default function Home(props: advice) {
     return (
         <main className={"w-full min-h-screen bg-slate-800 flex flex-col items-center justify-center px-4 pt-10 pb-16"}>
-            <AdviceContainer adviceID={props.id} adviceText={props.text}/>
+            <AdviceContainer {...props}/>
             <PoweredByStatement/>
         </main>
     )

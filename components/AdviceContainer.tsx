@@ -7,13 +7,10 @@ import advice from "../pages/types/advice";
 
 
 export default function AdviceContainer(props: {
-    adviceID: number,
-    adviceText: string
+    id: number,
+    text: string
 }) {
-    const [advice, setAdvice] = useState<advice>({
-        id: props.adviceID,
-        text: props.adviceText
-    })
+    const [advice, setAdvice] = useState<advice>(props)
 
     try {
         window.history.replaceState(null, "", "?id=" + advice.id)
