@@ -12,11 +12,15 @@ export default function Home(props: advice) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context: { query: { id: string } }) {
+    let adviceID: number | undefined = parseInt(context.query.id)
+    let adviceText
+
     let url = "https://api.adviceslip.com/advice"
 
-    let adviceID
-    let adviceText
+    if (adviceID) {
+        url += "/" + adviceID
+    }
 
     try {
         const response = await fetch(url, { cache: "no-store" })
@@ -31,8 +35,8 @@ export async function getServerSideProps() {
 
     return {
         props: {
-            adviceID: adviceID,
-            adviceText: adviceText
+            id: adviceID,
+            text: adviceText
         }
     }
 }

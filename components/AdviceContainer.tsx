@@ -13,7 +13,7 @@ export default function AdviceContainer(props: {
     const [adviceText, setAdviceText] = useState(props.adviceText)
 
     try {
-        window.history.replaceState(null, "", "/" + adviceID)
+        window.history.replaceState(null, "", "?id=" + adviceID)
     } catch (e) {}
 
     const updateAdvice = async (attempt: number = 0) => {
