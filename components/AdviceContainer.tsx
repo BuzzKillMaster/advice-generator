@@ -3,7 +3,7 @@ import AdviceHeading from "./AdviceHeading";
 import AdviceQuotation from "./AdviceQuotation";
 import AdviceContainerDecoration from "./AdviceContainerDecoration";
 import RequestAdviceButton from "./RequestAdviceButton";
-import Advice from "../pages/types/Advice";
+import Advice from "../types/Advice";
 
 
 export default function AdviceContainer(props: Advice) {
