@@ -1,7 +1,7 @@
-import React from "react";
-import AdviceContainer from "../components/AdviceContainer";
-import PoweredByStatement from "../components/PoweredByStatement";
-import Advice from "../types/Advice";
+import Advice from "@/types/Advice";
+import AdviceContainer from "@/components/AdviceContainer";
+import PoweredByStatement from "@/components/PoweredByStatement";
+
 
 export default function Home(props: Advice) {
     return (

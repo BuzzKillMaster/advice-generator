@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import AdviceHeading from "./AdviceHeading";
-import AdviceQuotation from "./AdviceQuotation";
-import AdviceContainerDecoration from "./AdviceContainerDecoration";
-import RequestAdviceButton from "./RequestAdviceButton";
-import Advice from "../types/Advice";
+import Advice from "@/types/Advice";
+import AdviceHeading from "@/components/AdviceHeading";
+import AdviceQuotation from "@/components/AdviceQuotation";
+import AdviceContainerDecoration from "@/components/AdviceContainerDecoration";
+import RequestAdviceButton from "@/components/RequestAdviceButton";
+
 
 
 export default function AdviceContainer(props: Advice) {
